@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --roboto: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-family: var(--roboto);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+.moon {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+}
+.moon p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #00acee;
+}
+.avatar {
+  width: 45px;
+  max-height: 45px;
+  border-radius: 100px;
+}
+.post-wrapper {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.297);
+  box-shadow: 0.9px 0.4px 0.7px -4px rgba(0, 0, 0, 0.016),
+    2.3px 1px 1.7px -4px rgba(0, 0, 0, 0.02),
+    4.1px 1.9px 3.1px -4px rgba(0, 0, 0, 0.024),
+    6.8px 3px 5.6px -4px rgba(0, 0, 0, 0.028),
+    10.8px 4.8px 10.4px -4px rgba(0, 0, 0, 0.036),
+    20px 9px 25px -4px rgba(0, 0, 0, 0.07);
+
+  padding: 10px;
+  margin-top: 50px;
+  max-width: 350px;
+}
+.user-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.user-names {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.user-names h4 {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.user-names p {
+  font-size: 0.68rem;
+  color: rgba(128, 128, 128, 0.571);
+}
+.three-dots {
+  color: rgba(128, 128, 128, 0.728);
+}
+.user-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.post-text-container {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 300;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1rem;
+  align-self: flex-start;
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-text-container p {
+  width: 100%;
+}
+.post-details-container {
+  width: 224px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-self: flex-start;
+}
+.post-details-container p {
+  color: rgba(128, 128, 128, 0.728);
+  font-size: 0.7rem;
+  /* font-weight: 500; */
+  letter-spacing: 0.5px;
+}
+.phone-type {
+  color: #00acee !important;
+}
+.tweet-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 10px;
+}
+.tweet-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.tweet-form label,
+label {
+  margin-bottom: 2px;
+  font-size: 0.75rem;
+  color: rgba(128, 128, 128, 0.728);
+  align-self: flex-start;
+}
+.names-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+.input {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.input input {
+  width: 95%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 4px;
+  font-family: var(--roboto);
+}
+.footer-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.picture {
+  font-size: 0.7rem;
+}
+.picture-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 350px;
+}
+.picture-label {
+  align-self: unset;
+}
+.creator {
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+.creator a {
+  color: #00acee;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.full-twitpost {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
 }
