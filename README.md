@@ -5,3 +5,6 @@ A simple project to create a Tweet without the need of Twitter. The created twee
 3) switch modes (dark mode and light mode)
 
 Live project: https://twitshots.netlify.app/
+
+
+Built with: Javascript Es6+, React Js, HTML5, CSS3
